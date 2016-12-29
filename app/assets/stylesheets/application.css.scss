@@ -19,6 +19,10 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+body {
+  position: relative;
+}
+
 //Tyography style 
  h1, h2, h3 {
     font-family: 'Open Sans', sans-serif;
@@ -64,8 +68,12 @@
   margin-top: 30px;
 }
 
-.alert-notice {
-  display: none;
+.alert-alert, .alert-notice{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.46);
+    border-color: rgba(245, 222, 179, 0.53);
+    margin-top: -14px;
+
 }
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
   color: white;
@@ -73,6 +81,10 @@
     color: white;
     opacity: 0.75;
   }
+}
+.flash-container {
+  position: absolute;
+  width: 100%;
 }
  
 
