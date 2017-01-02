@@ -9,3 +9,4 @@ class AddAttachmentAvatarToProfiles < ActiveRecord::Migration
     remove_attachment :profiles, :avatar
   end
 end
+
