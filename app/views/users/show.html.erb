@@ -1,11 +1,16 @@
 <div class= "container">
+  <%= label_tag :first_name, "Name: " %>
   <%= @user.profile.first_name %>
   <%= @user.profile.last_name %><br />
+  <%= label_tag :job_title, "Job Title: " %>
   <%= @user.profile.job_title %><br />
   
   <% if current_user.plan_id == 2 %>
+    <%= label_tag :phone_number, "Phone Number: " %>
     <%= @user.profile.phone_number %><br />
+    <%= label_tag :contact_email, "Contact Email: " %>
     <%= @user.profile.contact_email %><br />
   <% end %>
+  <%= label_tag :description, "Description: " %>
   <%= @user.profile.description %><br />
 </div>
