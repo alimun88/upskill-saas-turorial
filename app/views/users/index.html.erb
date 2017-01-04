@@ -1,7 +1,31 @@
 <div class="container">
   <div class= "row">
-    <div class= "col-md-6 col-md-offset-3">
-      <h2 class="text-center">List of all user</h2>
+    <div class= "col-md-8 col-md-offset-2">
+      <h2 class="text-center">List of all Community Members</h2>
+      <ul class="list-unstyled">
+        <% @users.each do |user| %>
+          <% if user.profile %>
+          <div class="well row <%= cycle('white-bg', '') %>">
+            <div class="col-sm-4 text-center">
+              <% if user.profile.avatar %>
+              <li>
+                <%= link_to user do %>
+                  <%= image_tag user.profile.avatar.url, class: 'user-index-avatar' %>
+                <% end %>
+              <% end %>
+            </div>
+            <div>
+              <%= link_to user do %>
+                <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+              <% end %>
+              <p><%= user.profile.job_title %></p>
+              
+            </div>
+          </div>
+          </li>  
+          <% end %>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
